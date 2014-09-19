@@ -17,7 +17,7 @@ main() {
   print("5) The first 16 terms of the 8 times table are: $result");
 }
 
-// 1) Séquence de fibonacci
+// 1) Séquence de fibonacci - Modifié à partir de la méthode à cette adresse https://github.com/dzenanr/ondart_examples/blob/master/ondart_functions/fibonacci_with_iteration.dart
 String fib (int n) {
 int first = 0, second = 1, x = 1, y = 1;
 String debut = "0 1";
