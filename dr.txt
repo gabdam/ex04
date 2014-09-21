@@ -1,0 +1,8 @@
+ex04
+
+3.
+
+Calculate the time in years, months and days
+
+example:
+25 years 8 months 17 days
