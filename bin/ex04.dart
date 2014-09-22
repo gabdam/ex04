@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'dart:core';
 main() {
   int nombre = 9;
   String fibSeq = fib(nombre);
@@ -7,8 +8,11 @@ main() {
   String position = rectangle();
   print("2) The coordinates are $position");
   
-  double totalDays = birth();
-  print("3) Elapsed time since my birth: ${totalDays/365.25} years or ${totalDays/12} months or ${totalDays} days.");
+  DateTime now = new DateTime.now();
+  DateTime birth = new DateTime(1993, 11, 10);
+  DateTime timeResult = new DateTime(now.year, now.month, now.day);
+  DateTime elapsed = elapsedTime(timeResult, birth);
+  print("3) Depuis ma naissance, il s'est écoulé ${elapsed.year} années, ${elapsed.month} mois et ${elapsed.day} jours.");
   
   double capital = finance();
   print("4) Total interest accumulated over 5 years will be ${capital} dollars.");
@@ -48,10 +52,10 @@ String rectangle() {
 
 
 // 3) Temps depuis naissance
-double birth() {
-  int years = 20, months = 11, days = 6;
-  double totalDays = (years + months/12 + days/365.25)*365.25; // 365.25 days in a year because I calculate leap years
-  return totalDays;
+DateTime elapsedTime(DateTime a, DateTime b) {
+   Duration elapsedDifference = a.difference(b);
+   DateTime elapsedSinceBirth = new DateTime(0).add(elapsedDifference);
+   return elapsedSinceBirth;
 }
 
 // 4) Calculer l'intérêt sur un montant de 1000$
