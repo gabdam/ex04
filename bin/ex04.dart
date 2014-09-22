@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-import 'dart:core';
 main() {
   int nombre = 9;
   String fibSeq = fib(nombre);
@@ -52,6 +51,7 @@ String rectangle() {
 
 
 // 3) Temps depuis naissance
+// Selon ces informations https://api.dartlang.org/apidocs/channels/stable/dartdoc-viewer/dart:core
 DateTime elapsedTime(DateTime a, DateTime b) {
    Duration elapsedDifference = a.difference(b);
    DateTime elapsedSinceBirth = new DateTime(0).add(elapsedDifference);
