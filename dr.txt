@@ -1,5 +1,12 @@
 ex04
 
+20/20
+
+utiliser le formatage correct 
+voir Dart Style Guide
+
+---
+
 3.
 
 Calculate the time in years, months and days

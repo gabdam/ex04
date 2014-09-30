@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+
 main() {
   int nombre = 9;
   String fibSeq = fib(nombre);
@@ -22,17 +23,16 @@ main() {
 
 // 1) Séquence de fibonacci - Modifié à partir de la méthode à cette adresse https://github.com/dzenanr/ondart_examples/blob/master/ondart_functions/fibonacci_with_iteration.dart
 String fib (int n) {
-int first = 0, second = 1, x = 1, y = 1;
-String debut = "0 1";
-while (n>y) {
- x = first + second;
- debut = "$debut $x";
- first = second;
- second = x;
- y = y + 1;
-}
-
-return debut;
+  int first = 0, second = 1, x = 1, y = 1;
+  String debut = "0 1";
+  while (n>y) {
+    x = first + second;
+    debut = "$debut $x";
+    first = second;
+    second = x;
+    y = y + 1;
+  }
+  return debut;
 }
   
 // 2) Calculer le point final
@@ -76,7 +76,6 @@ String table() {
     table = "$table $result";
   }
   return table;
-  
 }
 
    
